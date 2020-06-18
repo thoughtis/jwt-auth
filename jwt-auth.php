@@ -68,4 +68,4 @@ function jwt_auth_loader() {
 	$wp_rest_keypair = new WP_REST_Key_Pair();
 	$wp_rest_keypair->init();
 }
-add_action( 'plugins_loaded', 'jwt_auth_loader' );
+add_action( 'after_setup_theme', 'jwt_auth_loader' );
