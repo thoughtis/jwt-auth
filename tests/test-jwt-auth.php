@@ -29,7 +29,7 @@ class Test_JWT_Auth extends WP_UnitTestCase {
 	 * @since 0.1
 	 */
 	public function test_jwt_auth_loader() {
-		do_action( 'plugins_loaded' );
-		$this->assertEquals( 10, has_action( 'plugins_loaded', 'jwt_auth_loader' ) );
+		do_action( 'after_setup_theme' );
+		$this->assertEquals( 10, has_action( 'after_setup_theme', 'jwt_auth_loader' ) );
 	}
 }
